@@ -6,7 +6,6 @@ var router = express.Router();
 const { readAllData, getLeaderBoard, addToTable } = require("../model/scores");
 
 router.get("/", async function (req, res) {
-  console.log("hello");
   const data = await readAllData();
   res.json({ success: true, payload: data });
 });
